@@ -17,7 +17,7 @@
     <script type="text/javascript">
         $(function () {
 
-            $.each(province, function (k, v) { 
+            $.each(provinces, function (k, v) { 
                 var option = "<option value='" + v.id + "'>" + v.name + "</option>";
                 $("#province").append(option);
 				
@@ -27,7 +27,7 @@
                 var pid = $(this).val();
                 $("#city option:gt(0)").remove();
               
-                $.each(city, function (k, v) { 
+                $.each(citys, function (k, v) { 
                     if (v.pid == pid) {
                         var option = "<option value='" + v.id + "'>" + v.name + "</option>";
                         $("#city").append(option);
@@ -41,7 +41,7 @@
                 var cid = $(this).val();
                 $("#town option:gt(0)").remove(); 
 		
-                $.each(District, function (k, v) {
+                $.each(towns, function (k, v) {
                     if (v.cid == cid) {
                         var option = "<option value='" + v.id + "'>" + v.name + "</option>";
                         $("#town").append(option);
